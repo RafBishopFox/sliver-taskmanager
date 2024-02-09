@@ -1,0 +1,34 @@
+{
+    "name": "Taskmanager",
+    "version": "0.0.1",
+    "extension_author": "RafBishopFox",
+    "original_author": "RafBishopFox",
+    "repo_url": "https://github.com/sliverarmory/Taskmanager",
+    "commands": [
+        {
+            "command_name": "taskmanager",
+            "help": "Manage tasks on Windows machines (see README for usage information)",
+            "entrypoint": "Run",
+            "files": [
+                {
+                    "os": "windows",
+                    "arch": "amd64",
+                    "path": "taskmanager.x64.dll"
+                },
+                {
+                    "os": "windows",
+                    "arch": "386",
+                    "path": "taskmanager.x86.dll"
+                }
+            ],
+            "arguments": [
+                {
+                    "type": "string",
+                    "optional": false,
+                    "desc": "A command to run to interact with the computer's Task Manager service (see documentation)",
+                    "name": "command"
+                }
+            ]
+        }
+    ]
+}
